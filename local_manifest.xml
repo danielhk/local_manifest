@@ -10,7 +10,7 @@
 
   <remove-project name="android_external_wpa_supplicant_8"/>
   <project remote="github" path="external/wpa_supplicant_8" name="danielhk/android_external_wpa_supplicant_8_ath" revision="cm-11.0" groups="pdk" />
-  <project remote="github" path="packages/apps/SamsungServiceMode" name="CyanogenMod/android_packages_apps_SamsungServiceMode" revision="cm-11.0"/>
-  <project path="hardware/samsung" name="android_hardware_samsung" remote="omnirom" revision="android-4.4" />
+  <project remote="github" path="packages/apps/SamsungServiceMode" name="CyanogenMod/android_packages_apps_SamsungServiceMode" revision="cm-11.0" />
+  <project remote="github" path="hardware/samsung" name="SlimRoms/hardware_samsung" revision="kk4.4" />
 <!-- device tree for the building device -->
 </manifest>

@@ -1,7 +1,7 @@
 local_manifest.xml
 ==================
 
-The local_manifest.xml which list the extra resouces required for porting OmniROM 4.4.
+The local_manifest.xml which list the extra resouces required for porting SlimKat.
 
 Licensed under GPL v3
 
