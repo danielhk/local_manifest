@@ -13,7 +13,7 @@
   <remove-project name="CyanogenMod/android_packages_apps_BluetoothExt"/>
   <project path="packages/apps/Bluetooth" name="danielhk/android_packages_apps_Bluetooth" />
 <!-- device related -->
-  <project path="external/wpa_supplicant_8_ath" name="danielhk/android_external_wpa_supplicant_8_ath" />
+  <project path="hardware/atheros" name="danielhk/android_hardware_atheros_wlan" />
   <project path="hardware/samsung" name="CyanogenMod/android_hardware_samsung" />
   <project path="packages/apps/SamsungServiceMode" name="CyanogenMod/android_packages_apps_SamsungServiceMode" />
 </manifest>
