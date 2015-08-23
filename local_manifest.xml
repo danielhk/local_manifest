@@ -9,8 +9,8 @@
   <project remote="korg" path="external/bluetooth/sbc" name="bluetooth/sbc" group="pdk" revision="master"/>
   <project remote="gcode" path="external/bluetooth/glib" name="aosp-bluez.glib" group="pdk" revision="master"/>
 <!-- device related -->
-  <project path="hardware/atheros" name="danielhk/android_hardware_atheros_wlan" />
-  <project path="hardware/samsung" name="CyanogenMod/android_hardware_samsung" />
-  <project path="packages/apps/SamsungServiceMode" name="CyanogenMod/android_packages_apps_SamsungServiceMode" />
+  <project remote="github" path="hardware/atheros" name="danielhk/android_hardware_atheros_wlan" revision="cm-12.1"/>
+  <project remote="github" path="hardware/samsung" name="CyanogenMod/android_hardware_samsung" revision="cm-12.1"/>
+  <project remote="github" path="packages/apps/SamsungServiceMode" name="CyanogenMod/android_packages_apps_SamsungServiceMode" revision="cm-12.1"/>
 <!-- device trees -->
 </manifest>
