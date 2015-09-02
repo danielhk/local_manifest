@@ -3,16 +3,15 @@
 <!-- bluez support-->
   <remote name="gcode" fetch="https://code.google.com/p/"/>
   <remote name="korg" fetch="git://git.kernel.org/pub/scm/bluetooth/"/>
+
   <remove-project name="CyanogenMod/android_external_bluetooth_bluedroid"/>
   <project remote="korg" path="external/bluetooth/bluez" name="bluez" group="pdk" revision="master"/>
   <project remote="korg" path="external/bluetooth/sbc" name="sbc" group="pdk" revision="master"/>
   <project remote="gcode" path="external/bluetooth/glib" name="aosp-bluez.glib" group="pdk" revision="master"/>
-
+<!-- Bluetooth app -->
   <remove-project name="CarbonDev/android_packages_apps_Bluetooth"/>
   <remove-project name="CarbonDev/android_packages_apps_BluetoothExt"/>
   <project path="packages/apps/Bluetooth" name="danielhk/android_packages_apps_Bluetooth" revision="cm-11.0" />
-  <remove-project name="CarbonDev/android_external_wpa_supplicant_8"/>
-  <project path="external/wpa_supplicant_8" name="danielhk/android_external_wpa_supplicant_8_ath" groups="pdk" revision="cm-11.0" />
   <project path="packages/apps/SamsungServiceMode" name="CyanogenMod/android_packages_apps_SamsungServiceMode" revision="cm-11.0" />
   <project path="hardware/samsung" name="CyanogenMod/android_hardware_samsung" revision="cm-11.0" />
 <!-- device tree for the building device -->
