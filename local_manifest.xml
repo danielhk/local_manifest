@@ -11,7 +11,7 @@
 <!-- Bluetooth app -->
   <remove-project name="CarbonDev/android_packages_apps_Bluetooth"/>
   <remove-project name="CarbonDev/android_packages_apps_BluetoothExt"/>
-  <project path="packages/apps/Bluetooth" name="danielhk/android_packages_apps_Bluetooth" revision="cm-11.0" />
+  <project path="packages/apps/Bluetooth" name="danielhk/android_packages_apps_Bluetooth" revision="cm-12.1" />
   <project path="packages/apps/SamsungServiceMode" name="CyanogenMod/android_packages_apps_SamsungServiceMode" revision="cm-11.0" />
   <project path="hardware/samsung" name="CyanogenMod/android_hardware_samsung" revision="cm-11.0" />
 <!-- device tree for the building device -->
