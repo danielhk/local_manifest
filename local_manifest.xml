@@ -6,10 +6,12 @@
   <remote name="gcode" fetch="https://code.google.com/p/"/>
   <remote name="korg" fetch="git://git.kernel.org/pub/scm/"/>
 
-  <remove-project name="android_external_bluetooth_bluedroid"/>
   <project remote="korg" path="external/bluetooth/bluez" name="bluetooth/bluez" group="pdk" revision="master"/>
   <project remote="korg" path="external/bluetooth/sbc" name="bluetooth/sbc" group="pdk" revision="master"/>
   <project remote="gcode" path="external/bluetooth/glib" name="aosp-bluez.glib" group="pdk" revision="master"/>
+
+<!-- Helper apps, Bluez coexist with bluedroid -->
+  <project remote="cm" path="external/bluetooth" name="danielhk/android_external_bluetooth" />
 
 <!-- device related -->
   <project remote="cm" path="hardware/atheros" name="danielhk/android_hardware_atheros_wlan" />
