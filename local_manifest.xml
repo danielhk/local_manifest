@@ -4,16 +4,27 @@
   <remote name="gcode" fetch="https://code.google.com/p/"/>
   <remote name="korg" fetch="git://git.kernel.org/pub/scm/"/>
 
-  <remove-project name="CyanogenMod/android_external_bluetooth_bluedroid"/>
   <project remote="korg" path="external/bluetooth/bluez" name="bluetooth/bluez" group="pdk" revision="master"/>
   <project remote="korg" path="external/bluetooth/sbc" name="bluetooth/sbc" group="pdk" revision="master"/>
   <project remote="gcode" path="external/bluetooth/glib" name="aosp-bluez.glib" group="pdk" revision="master"/>
-<!-- Bluetooth app -->
+
+<!-- Bluetooth apps, move to BluetoothApps to handle both -->
   <remove-project name="CyanogenMod/android_packages_apps_Bluetooth"/>
   <remove-project name="CyanogenMod/android_packages_apps_BluetoothExt"/>
-  <project path="packages/apps/Bluetooth" name="danielhk/android_packages_apps_Bluetooth" />
+  <project path="packages/apps/BluetoothApps/Bluedroid/Bluetooth" name="CyanogenMod/android_packages_apps_Bluetooth" />
+  <project path="packages/apps/BluetoothApps/Bluedroid/BluetoothExt" name="CyanogenMod/android_packages_apps_BluetoothExt" />
+  <project path="packages/apps/BluetoothApps/Bluez/Bluetooth" name="danielhk/android_packages_apps_Bluetooth" />
+
+<!-- Helper apps, Bluez coexist with bluedroid -->
+  <project path="external/bluetooth" name="danielhk/android_external_bluetooth" />
+  <project path="packages/apps/BluetoothApps" name="danielhk/android_packages_apps_BluetoothApps" />
+
 <!-- device related -->
   <project path="hardware/atheros" name="danielhk/android_hardware_atheros_wlan" />
   <project path="hardware/samsung" name="CyanogenMod/android_hardware_samsung" />
   <project path="packages/apps/SamsungServiceMode" name="CyanogenMod/android_packages_apps_SamsungServiceMode" />
+  <project path="vendor/samsung" name="danielhk/proprietary_vendor_samsung_smdk4210" />
+
+<!-- device tree and kernel -->
+
 </manifest>
