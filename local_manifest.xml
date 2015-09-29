@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote  name="cm" fetch="git://github.com/" revision="refs/heads/cm-12.1" />
+  <remote name="cm" fetch="git://github.com/" revision="refs/heads/cm-12.1" />
 
 <!-- bluez support-->
   <remote name="gcode" fetch="https://code.google.com/p/"/>
@@ -15,6 +15,7 @@
   <project remote="cm" path="hardware/atheros" name="danielhk/android_hardware_atheros_wlan" />
   <project remote="cm" path="hardware/samsung" name="CyanogenMod/android_hardware_samsung" />
   <project remote="cm" path="packages/apps/SamsungServiceMode" name="CyanogenMod/android_packages_apps_SamsungServiceMode" />
+  <project remote="cm" path="vendor/samsung" name="danielhk/proprietary_vendor_samsung_smdk4210" />
 
 <!-- device trees -->
 </manifest>
