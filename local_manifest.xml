@@ -4,17 +4,26 @@
   <remote name="gcode" fetch="https://code.google.com/p/"/>
   <remote name="korg" fetch="git://git.kernel.org/pub/scm/bluetooth/"/>
 
-  <remove-project name="CyanogenMod/android_external_bluetooth_bluedroid"/>
   <project remote="korg" path="external/bluetooth/bluez" name="bluez" group="pdk" revision="master"/>
   <project remote="korg" path="external/bluetooth/sbc" name="sbc" group="pdk" revision="master"/>
   <project remote="gcode" path="external/bluetooth/glib" name="aosp-bluez.glib" group="pdk" revision="master"/>
-<!-- Bluetooth app -->
-  <remove-project name="CarbonDev/android_packages_apps_Bluetooth"/>
-  <remove-project name="CarbonDev/android_packages_apps_BluetoothExt"/>
-  <project remote="gh" path="packages/apps/Bluetooth" name="danielhk/android_packages_apps_Bluetooth" revision="cm-12.1" />
+
+<!-- Bluetooth apps, move to BluetoothApps to handle both -->
+  <remove-project name="CyanogenMod/android_packages_apps_Bluetooth"/>
+  <remove-project name="CyanogenMod/android_packages_apps_BluetoothExt"/>
+  <project remote="cm" path="packages/apps/BluetoothApps/Bluedroid/Bluetooth" name="CyanogenMod/android_packages_apps_Bluetooth" />
+  <project remote="cm" path="packages/apps/BluetoothApps/Bluedroid/BluetoothExt" name="CyanogenMod/android_packages_apps_BluetoothExt" />
+  <project remote="gh" path="packages/apps/BluetoothApps/Bluez/Bluetooth" name="danielhk/android_packages_apps_Bluetooth" revision="cm-12.1" />
+
+<!-- Helper apps, Bluez coexist with bluedroid -->
+  <project remote="gh" path="external/bluetooth" name="danielhk/android_external_bluetooth" revision="cm-12.1" />
+  <project remote="gh" path="packages/apps/BluetoothApps" name="danielhk/android_packages_apps_BluetoothApps" revision="cm-12.1" />
+
 <!-- device related -->
   <project remote="gh" path="hardware/atheros" name="danielhk/android_hardware_atheros_wlan" revision="cm-12.1" />
-  <project remote="gh" path="packages/apps/SamsungServiceMode" name="CyanogenMod/android_packages_apps_SamsungServiceMode" revision="cm-12.1" />
-  <project remote="gh" path="hardware/samsung" name="CyanogenMod/android_hardware_samsung" revision="cm-12.1" />
+  <project remote="cm" path="hardware/samsung" name="CyanogenMod/android_hardware_samsung" />
+  <project remote="cm" path="packages/apps/SamsungServiceMode" name="CyanogenMod/android_packages_apps_SamsungServiceMode" />
+  <project remote="gh" path="vendor/samsung" name="danielhk/proprietary_vendor_samsung_smdk4210" revision="cm-12.1" />
+
 <!-- device tree for the building device -->
 </manifest>
