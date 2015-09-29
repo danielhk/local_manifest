@@ -4,7 +4,7 @@
   <remote name="gcode" fetch="https://code.google.com/p/"/>
   <remote name="korg" fetch="git://git.kernel.org/pub/scm/"/>
 
-  <remove-project name="CyanogenMod/android_external_bluetooth_bluedroid"/>
+  <remove-project name="android_external_bluetooth_bluedroid"/>
   <project remote="korg" path="external/bluetooth/bluez" name="bluetooth/bluez" group="pdk" revision="master"/>
   <project remote="korg" path="external/bluetooth/sbc" name="bluetooth/sbc" group="pdk" revision="master"/>
   <project remote="gcode" path="external/bluetooth/glib" name="aosp-bluez.glib" group="pdk" revision="master"/>
