@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="cm" fetch="git://github.com/" revision="refs/heads/cm-12.1" />
+  <remote name="cm" fetch="git://github.com/" revision="refs/heads/cm-13.0" />
 
 <!-- bluez support-->
-  <remote name="gcode" fetch="https://code.google.com/p/"/>
-  <remote name="korg" fetch="git://git.kernel.org/pub/scm/"/>
+  <remote name="bluez-android" fetch="https://github.com/bluez-android" />
+  <remote name="korg" fetch="git://git.kernel.org/pub/scm/bluetooth/"/>
 
-  <project remote="korg" path="external/bluetooth/bluez" name="bluetooth/bluez" group="pdk" revision="master"/>
-  <project remote="korg" path="external/bluetooth/sbc" name="bluetooth/sbc" group="pdk" revision="master"/>
-  <project remote="gcode" path="external/bluetooth/glib" name="aosp-bluez.glib" group="pdk" revision="master"/>
+  <project remote="korg" path="external/bluetooth/bluez" name="bluez" group="pdk" revision="master"/>
+  <project remote="korg" path="external/bluetooth/sbc" name="sbc" group="pdk" revision="master"/>
+  <project remote="bluez-android" path="external/bluetooth/glib" name="glib" group="pdk" revision="master"/>
 
-<!-- Helper apps, Bluez coexist with bluedroid -->
-  <project remote="cm" path="external/bluetooth" name="danielhk/android_external_bluetooth" />
+<!-- Remove system_bt -->
+  <remove-project name="android_system_bt"/>
 
 <!-- device related -->
   <project remote="cm" path="hardware/atheros" name="danielhk/android_hardware_atheros_wlan" />
@@ -19,5 +19,5 @@
   <project remote="cm" path="packages/apps/SamsungServiceMode" name="CyanogenMod/android_packages_apps_SamsungServiceMode" />
   <project remote="cm" path="vendor/samsung" name="danielhk/proprietary_vendor_samsung_smdk4210" />
 
-<!-- device trees -->
+<!-- device trees & kernel -->
 </manifest>
