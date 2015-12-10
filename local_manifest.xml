@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 <!-- bluez support-->
-  <remote name="gcode" fetch="https://code.google.com/p/"/>
-  <remote name="korg" fetch="git://git.kernel.org/pub/scm/"/>
+  <remote name="bluez-android" fetch="https://github.com/bluez-android" />
+  <remote name="korg" fetch="git://git.kernel.org/pub/scm/bluetooth/"/>
 
-  <project remote="korg" path="external/bluetooth/bluez" name="bluetooth/bluez" group="pdk" revision="master"/>
-  <project remote="korg" path="external/bluetooth/sbc" name="bluetooth/sbc" group="pdk" revision="master"/>
-  <project remote="gcode" path="external/bluetooth/glib" name="aosp-bluez.glib" group="pdk" revision="master"/>
+<!-- Track my bluez with M patch -->
+  <project path="external/bluetooth/bluez" name="danielhk/android_external_bluetooth_bluez" group="pdk" revision="master" />
+<!--  <project remote="korg" path="external/bluetooth/bluez" name="bluez" group="pdk" revision="master"/> -->
+  <project remote="korg" path="external/bluetooth/sbc" name="sbc" group="pdk" revision="master"/>
+  <project remote="bluez-android" path="external/bluetooth/glib" name="glib" group="pdk" revision="master"/>
 
-<!-- Bluetooth apps, move to BluetoothApps to handle both -->
-  <remove-project name="CyanogenMod/android_packages_apps_Bluetooth"/>
-  <remove-project name="CyanogenMod/android_packages_apps_BluetoothExt"/>
-  <project path="packages/apps/BluetoothApps/Bluedroid/Bluetooth" name="CyanogenMod/android_packages_apps_Bluetooth" />
-  <project path="packages/apps/BluetoothApps/Bluedroid/BluetoothExt" name="CyanogenMod/android_packages_apps_BluetoothExt" />
-  <project path="packages/apps/BluetoothApps/Bluez/Bluetooth" name="danielhk/android_packages_apps_Bluetooth" />
-
-<!-- Helper apps, Bluez coexist with bluedroid -->
-  <project path="external/bluetooth" name="danielhk/android_external_bluetooth" />
-  <project path="packages/apps/BluetoothApps" name="danielhk/android_packages_apps_BluetoothApps" />
+<!-- Remove system_bt -->
+  <remove-project name="android_system_bt"/>
 
 <!-- device related -->
   <project path="hardware/atheros" name="danielhk/android_hardware_atheros_wlan" />
@@ -25,6 +19,6 @@
   <project path="packages/apps/SamsungServiceMode" name="CyanogenMod/android_packages_apps_SamsungServiceMode" />
   <project path="vendor/samsung" name="danielhk/proprietary_vendor_samsung_smdk4210" />
 
-<!-- device tree and kernel -->
+<!-- device trees and kernel -->
 
 </manifest>
