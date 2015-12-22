@@ -14,6 +14,7 @@
   <remove-project name="android_system_bt"/>
 
 <!-- device related -->
+  <project path="external/stlport" name="CyanogenMod/android_external_stlport" />
   <project path="hardware/atheros" name="danielhk/android_hardware_atheros_wlan" />
   <project path="hardware/samsung" name="CyanogenMod/android_hardware_samsung" />
   <project path="packages/apps/SamsungServiceMode" name="CyanogenMod/android_packages_apps_SamsungServiceMode" />
