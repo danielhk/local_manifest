@@ -14,6 +14,7 @@
   <remove-project name="android_system_bt"/>
 
 <!-- device related -->
+  <project remote="omnirom" path="external/busybox" name="android_external_busybox" revision="android-6.0" />
   <project remote="cm" path="hardware/atheros" name="danielhk/android_hardware_atheros_wlan" />
   <project remote="cm" path="hardware/samsung" name="CyanogenMod/android_hardware_samsung" />
   <project remote="cm" path="packages/apps/SamsungServiceMode" name="CyanogenMod/android_packages_apps_SamsungServiceMode" />
